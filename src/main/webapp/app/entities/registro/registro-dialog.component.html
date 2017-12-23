@@ -1,0 +1,85 @@
+<form name="editForm" role="form" novalidate (ngSubmit)="save()" #editForm="ngForm">
+
+    <div class="modal-header">
+        <h4 class="modal-title" id="myRegistroLabel" jhiTranslate="entidadApp.registro.home.createOrEditLabel">Create or edit a Registro</h4>
+        <button type="button" class="close" data-dismiss="modal" aria-hidden="true"
+                (click)="clear()">&times;</button>
+    </div>
+    <div class="modal-body">
+        <jhi-alert-error></jhi-alert-error>
+        <div class="form-group" [hidden]="!registro.id">
+            <label for="id" jhiTranslate="global.field.id">ID</label>
+            <input type="text" class="form-control" id="id" name="id"
+                   [(ngModel)]="registro.id" readonly />
+        </div>
+        <div class="form-group">
+            <label class="form-control-label" jhiTranslate="entidadApp.registro.fecha" for="field_fecha">Fecha</label>
+            <div class="d-flex">
+                <input id="field_fecha" type="datetime-local" class="form-control" name="fecha" [(ngModel)]="registro.fecha"
+                  />
+            </div>
+        </div>
+        <div class="form-group">
+            <label class="form-control-label" jhiTranslate="entidadApp.registro.hora" for="field_hora">Hora</label>
+            <div class="d-flex">
+                <input id="field_hora" type="datetime-local" class="form-control" name="hora" [(ngModel)]="registro.hora"
+                  />
+            </div>
+        </div>
+        <div class="form-group">
+            <label class="form-control-label" jhiTranslate="entidadApp.registro.tipoCV" for="field_tipoCV">Tipo CV</label>
+            <select class="form-control" name="tipoCV" [(ngModel)]="registro.tipoCV" id="field_tipoCV" >
+                <option value="TUNEL">{{'entidadApp.TipoCV.TUNEL' | translate}}</option>
+                <option value="ESTACION">{{'entidadApp.TipoCV.ESTACION' | translate}}</option>
+                <option value="CABECERA">{{'entidadApp.TipoCV.CABECERA' | translate}}</option>
+            </select>
+        </div>
+        <div class="form-group">
+            <label class="form-control-label" jhiTranslate="entidadApp.registro.linea" for="field_linea">Linea</label>
+            <select class="form-control" name="linea" [(ngModel)]="registro.linea" id="field_linea" >
+                <option value="L1">{{'entidadApp.Linea.L1' | translate}}</option>
+                <option value="L2">{{'entidadApp.Linea.L2' | translate}}</option>
+                <option value="L3">{{'entidadApp.Linea.L3' | translate}}</option>
+                <option value="L4">{{'entidadApp.Linea.L4' | translate}}</option>
+                <option value="L5">{{'entidadApp.Linea.L5' | translate}}</option>
+                <option value="L6">{{'entidadApp.Linea.L6' | translate}}</option>
+                <option value="L7">{{'entidadApp.Linea.L7' | translate}}</option>
+                <option value="L7B">{{'entidadApp.Linea.L7B' | translate}}</option>
+                <option value="L8">{{'entidadApp.Linea.L8' | translate}}</option>
+                <option value="L9">{{'entidadApp.Linea.L9' | translate}}</option>
+                <option value="TFM">{{'entidadApp.Linea.TFM' | translate}}</option>
+                <option value="L10">{{'entidadApp.Linea.L10' | translate}}</option>
+                <option value="L10B">{{'entidadApp.Linea.L10B' | translate}}</option>
+                <option value="L11">{{'entidadApp.Linea.L11' | translate}}</option>
+                <option value="L12">{{'entidadApp.Linea.L12' | translate}}</option>
+                <option value="RAMAL">{{'entidadApp.Linea.RAMAL' | translate}}</option>
+            </select>
+        </div>
+        <div class="form-group">
+            <label class="form-control-label" jhiTranslate="entidadApp.registro.nombreCV" for="field_nombreCV">Nombre CV</label>
+            <input type="text" class="form-control" name="nombreCV" id="field_nombreCV"
+                [(ngModel)]="registro.nombreCV"  />
+        </div>
+        <div class="form-group">
+            <label class="form-control-label" jhiTranslate="entidadApp.registro.chapa" for="field_chapa">Chapa</label>
+            <input type="text" class="form-control" name="chapa" id="field_chapa"
+                [(ngModel)]="registro.chapa"  />
+        </div>
+        <div class="form-group">
+            <label class="form-control-label" jhiTranslate="entidadApp.registro.accion" for="field_accion">Accion</label>
+            <select class="form-control" name="accion" [(ngModel)]="registro.accion" id="field_accion" >
+                <option value="OCUPA">{{'entidadApp.Accion.OCUPA' | translate}}</option>
+                <option value="LIBERA">{{'entidadApp.Accion.LIBERA' | translate}}</option>
+            </select>
+        </div>
+
+    </div>
+    <div class="modal-footer">
+        <button type="button" class="btn btn-secondary" data-dismiss="modal" (click)="clear()">
+            <span class="fa fa-ban"></span>&nbsp;<span jhiTranslate="entity.action.cancel">Cancel</span>
+        </button>
+        <button type="submit" [disabled]="editForm.form.invalid || isSaving" class="btn btn-primary">
+            <span class="fa fa-save"></span>&nbsp;<span jhiTranslate="entity.action.save">Save</span>
+        </button>
+    </div>
+</form>

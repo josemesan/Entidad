@@ -1,0 +1,10 @@
+{
+    "entidadApp": {
+        "TipoCV" : {
+            "null": "",
+            "TUNEL": "TUNEL",
+            "ESTACION": "ESTACION",
+            "CABECERA": "CABECERA"
+        }
+    }
+}

@@ -1,0 +1,9 @@
+{
+    "entidadApp": {
+        "Accion" : {
+            "null": "",
+            "OCUPA": "OCUPA",
+            "LIBERA": "LIBERA"
+        }
+    }
+}

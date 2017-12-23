@@ -1,0 +1,42 @@
+{
+    "fluentMethods": true,
+    "relationships": [],
+    "fields": [
+        {
+            "fieldName": "fecha",
+            "fieldType": "Instant"
+        },
+        {
+            "fieldName": "hora",
+            "fieldType": "Instant"
+        },
+        {
+            "fieldName": "tipoCV",
+            "fieldType": "TipoCV",
+            "fieldValues": "TUNEL,ESTACION,CABECERA"
+        },
+        {
+            "fieldName": "linea",
+            "fieldType": "Linea",
+            "fieldValues": "L1,L2,L3,L4,L5,L6,L7,L7B,L8,L9,TFM,L10,L10B,L11,L12,RAMAL"
+        },
+        {
+            "fieldName": "nombreCV",
+            "fieldType": "String"
+        },
+        {
+            "fieldName": "chapa",
+            "fieldType": "String"
+        },
+        {
+            "fieldName": "accion",
+            "fieldType": "Accion",
+            "fieldValues": "OCUPA,LIBERA"
+        }
+    ],
+    "changelogDate": "20171223171329",
+    "entityTableName": "registro",
+    "dto": "no",
+    "pagination": "infinite-scroll",
+    "service": "no"
+}

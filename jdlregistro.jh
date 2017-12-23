@@ -1,0 +1,20 @@
+entity Registro {
+		fecha Instant,
+    	hora Instant,
+		tipoCV TipoCV,
+    	linea Linea,
+    	nombreCV String,
+    	chapa String,
+    	accion Accion    
+}
+enum TipoCV {
+		TUNEL, ESTACION, CABECERA
+}
+enum Accion {
+    	OCUPA, LIBERA
+}
+enum Linea {
+		L1, L2, L3, L4, L5, L6, L7, L7B, L8, L9, TFM, L10, 
+        L10B, L11, L12, RAMAL
+}
+paginate Registro with infinite-scroll

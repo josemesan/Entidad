@@ -1,0 +1,49 @@
+
+<div *ngIf="registro">
+    <h2><span jhiTranslate="entidadApp.registro.detail.title">Registro</span> {{registro.id}}</h2>
+    <hr>
+    <jhi-alert-error></jhi-alert-error>
+    <dl class="row-md jh-entity-details">
+        <dt><span jhiTranslate="entidadApp.registro.fecha">Fecha</span></dt>
+        <dd>
+            <span>{{registro.fecha | date:'medium'}}</span>
+        </dd>
+        <dt><span jhiTranslate="entidadApp.registro.hora">Hora</span></dt>
+        <dd>
+            <span>{{registro.hora | date:'medium'}}</span>
+        </dd>
+        <dt><span jhiTranslate="entidadApp.registro.tipoCV">Tipo CV</span></dt>
+        <dd>
+            <span jhiTranslate="{{'entidadApp.TipoCV.' + registro.tipoCV}}">{{registro.tipoCV}}</span>
+        </dd>
+        <dt><span jhiTranslate="entidadApp.registro.linea">Linea</span></dt>
+        <dd>
+            <span jhiTranslate="{{'entidadApp.Linea.' + registro.linea}}">{{registro.linea}}</span>
+        </dd>
+        <dt><span jhiTranslate="entidadApp.registro.nombreCV">Nombre CV</span></dt>
+        <dd>
+            <span>{{registro.nombreCV}}</span>
+        </dd>
+        <dt><span jhiTranslate="entidadApp.registro.chapa">Chapa</span></dt>
+        <dd>
+            <span>{{registro.chapa}}</span>
+        </dd>
+        <dt><span jhiTranslate="entidadApp.registro.accion">Accion</span></dt>
+        <dd>
+            <span jhiTranslate="{{'entidadApp.Accion.' + registro.accion}}">{{registro.accion}}</span>
+        </dd>
+    </dl>
+
+    <button type="submit"
+            (click)="previousState()"
+            class="btn btn-info">
+        <span class="fa fa-arrow-left"></span>&nbsp;<span jhiTranslate="entity.action.back"> Back</span>
+    </button>
+
+    <button type="button"
+            [routerLink]="['/', { outlets: { popup: 'registro/'+ registro.id + '/edit'} }]"
+            replaceUrl="true"
+            class="btn btn-primary">
+        <span class="fa fa-pencil"></span>&nbsp;<span jhiTranslate="entity.action.edit"> Edit</span>
+    </button>
+</div>

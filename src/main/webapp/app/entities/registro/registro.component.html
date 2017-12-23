@@ -1,0 +1,68 @@
+<div>
+    <h2>
+        <span jhiTranslate="entidadApp.registro.home.title">Registros</span>
+        <button class="btn btn-primary float-right jh-create-entity create-registro" [routerLink]="['/', { outlets: { popup: ['registro-new'] } }]">
+            <span class="fa fa-plus"></span>
+            <span  jhiTranslate="entidadApp.registro.home.createLabel">
+            Create new Registro
+            </span>
+        </button>
+    </h2>
+    <jhi-alert></jhi-alert>
+    <div class="row">
+    </div>
+    <br/>
+    <div class="table-responsive" *ngIf="registros">
+        <table class="table table-striped">
+            <thead>
+            <tr jhiSort [(predicate)]="predicate" [(ascending)]="reverse" [callback]="reset.bind(this)">
+            <th jhiSortBy="id"><span jhiTranslate="global.field.id">ID</span> <span class="fa fa-sort"></span></th>
+            <th jhiSortBy="fecha"><span jhiTranslate="entidadApp.registro.fecha">Fecha</span> <span class="fa fa-sort"></span></th>
+            <th jhiSortBy="hora"><span jhiTranslate="entidadApp.registro.hora">Hora</span> <span class="fa fa-sort"></span></th>
+            <th jhiSortBy="tipoCV"><span jhiTranslate="entidadApp.registro.tipoCV">Tipo CV</span> <span class="fa fa-sort"></span></th>
+            <th jhiSortBy="linea"><span jhiTranslate="entidadApp.registro.linea">Linea</span> <span class="fa fa-sort"></span></th>
+            <th jhiSortBy="nombreCV"><span jhiTranslate="entidadApp.registro.nombreCV">Nombre CV</span> <span class="fa fa-sort"></span></th>
+            <th jhiSortBy="chapa"><span jhiTranslate="entidadApp.registro.chapa">Chapa</span> <span class="fa fa-sort"></span></th>
+            <th jhiSortBy="accion"><span jhiTranslate="entidadApp.registro.accion">Accion</span> <span class="fa fa-sort"></span></th>
+            <th></th>
+            </tr>
+            </thead>
+            <tbody infinite-scroll (scrolled)="loadPage(page + 1)" [infiniteScrollDisabled]="page >= links['last']" [infiniteScrollDistance]="0">
+            <tr *ngFor="let registro of registros ;trackBy: trackId">
+                <td><a [routerLink]="['../registro', registro.id ]">{{registro.id}}</a></td>
+                <td>{{registro.fecha | date:'medium'}}</td>
+                <td>{{registro.hora | date:'medium'}}</td>
+                <td jhiTranslate="{{'entidadApp.TipoCV.' + registro.tipoCV}}">{{registro.tipoCV}}</td>
+                <td jhiTranslate="{{'entidadApp.Linea.' + registro.linea}}">{{registro.linea}}</td>
+                <td>{{registro.nombreCV}}</td>
+                <td>{{registro.chapa}}</td>
+                <td jhiTranslate="{{'entidadApp.Accion.' + registro.accion}}">{{registro.accion}}</td>
+                <td class="text-right">
+                    <div class="btn-group flex-btn-group-container">
+                        <button type="submit"
+                                [routerLink]="['../registro', registro.id ]"
+                                class="btn btn-info btn-sm">
+                            <span class="fa fa-eye"></span>
+                            <span class="d-none d-md-inline" jhiTranslate="entity.action.view">View</span>
+                        </button>
+                        <button type="submit"
+                                [routerLink]="['/', { outlets: { popup: 'registro/'+ registro.id + '/edit'} }]"
+                                replaceUrl="true"
+                                class="btn btn-primary btn-sm">
+                            <span class="fa fa-pencil"></span>
+                            <span class="d-none d-md-inline" jhiTranslate="entity.action.edit">Edit</span>
+                        </button>
+                        <button type="submit"
+                                [routerLink]="['/', { outlets: { popup: 'registro/'+ registro.id + '/delete'} }]"
+                                replaceUrl="true"
+                                class="btn btn-danger btn-sm">
+                            <span class="fa fa-remove"></span>
+                            <span class="d-none d-md-inline" jhiTranslate="entity.action.delete">Delete</span>
+                        </button>
+                    </div>
+                </td>
+            </tr>
+            </tbody>
+        </table>
+    </div>
+</div>

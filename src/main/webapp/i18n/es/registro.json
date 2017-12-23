@@ -1,0 +1,27 @@
+{
+    "entidadApp": {
+        "registro" : {
+            "home": {
+                "title": "Registros",
+                "createLabel": "Crear nuevo Registro",
+                "createOrEditLabel": "Crear o editar Registro"
+            },
+            "created": "Un nuevo Registro ha sido creado con el identificador {{ param }}",
+            "updated": "Un Registro ha sido actualizado con el identificador {{ param }}",
+            "deleted": "Un Registro ha sido eliminado con el identificador {{ param }}",
+            "delete": {
+                "question": "¿Seguro que quiere eliminar Registro {{ id }}?"
+            },
+            "detail": {
+                "title": "Registro"
+            },
+            "fecha": "Fecha",
+            "hora": "Hora",
+            "tipoCV": "Tipo CV",
+            "linea": "Linea",
+            "nombreCV": "Nombre CV",
+            "chapa": "Chapa",
+            "accion": "Accion"
+        }
+    }
+}
