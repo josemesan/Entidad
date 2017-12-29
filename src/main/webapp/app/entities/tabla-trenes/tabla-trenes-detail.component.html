@@ -1,0 +1,25 @@
+
+<div *ngIf="tablaTrenes">
+    <h2><span jhiTranslate="entidadApp.tablaTrenes.detail.title">Tabla Trenes</span> {{tablaTrenes.id}}</h2>
+    <hr>
+    <jhi-alert-error></jhi-alert-error>
+    <dl class="row-md jh-entity-details">
+        <dt><span jhiTranslate="entidadApp.tablaTrenes.numeroTrenes">Numero Trenes</span></dt>
+        <dd>
+            <span>{{tablaTrenes.numeroTrenes}}</span>
+        </dd>
+    </dl>
+
+    <button type="submit"
+            (click)="previousState()"
+            class="btn btn-info">
+        <span class="fa fa-arrow-left"></span>&nbsp;<span jhiTranslate="entity.action.back"> Back</span>
+    </button>
+
+    <button type="button"
+            [routerLink]="['/', { outlets: { popup: 'tabla-trenes/'+ tablaTrenes.id + '/edit'} }]"
+            replaceUrl="true"
+            class="btn btn-primary">
+        <span class="fa fa-pencil"></span>&nbsp;<span jhiTranslate="entity.action.edit"> Edit</span>
+    </button>
+</div>

@@ -1,0 +1,22 @@
+{
+    "entidadApp": {
+        "tren" : {
+            "home": {
+                "title": "Trens",
+                "createLabel": "Create a new Tren",
+                "createOrEditLabel": "Create or edit a Tren"
+            },
+            "created": "A new Tren is created with identifier {{ param }}",
+            "updated": "A Tren is updated with identifier {{ param }}",
+            "deleted": "A Tren is deleted with identifier {{ param }}",
+            "delete": {
+                "question": "Are you sure you want to delete Tren {{ id }}?"
+            },
+            "detail": {
+                "title": "Tren"
+            },
+            "numero": "Numero",
+            "viajeros": "Viajeros"
+        }
+    }
+}

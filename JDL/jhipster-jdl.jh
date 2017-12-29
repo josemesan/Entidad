@@ -1,0 +1,36 @@
+entity TablaTrenes {
+	numeroTrenes Integer
+}
+entity Estacion {
+	name String,
+    nemo String
+}
+entity Linea {
+	numeroDeTrenes Integer
+}
+entity Evento {
+	nombre String
+}
+entity Fecha {
+	dia String,
+    hora String
+}
+entity Tren {
+	numero String,
+    viajeros String
+}
+enum Via {
+    UNO, DOS
+}
+enum TipoEstacion {
+    CABECERA, NOCABECERA
+}
+enum NombreLinea {
+    L2, L3, L4, L5, L7, L8, L9, L10 , L11, L12, RAMAL
+}
+enum TipoDeDia{
+    L, V, S, F, E
+}
+enum TipoDeEvento{
+    OCUPA, LIBERA
+}

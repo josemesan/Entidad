@@ -1,0 +1,15 @@
+{
+    "fluentMethods": true,
+    "relationships": [],
+    "fields": [
+        {
+            "fieldName": "nombre",
+            "fieldType": "String"
+        }
+    ],
+    "changelogDate": "20171229105422",
+    "entityTableName": "evento",
+    "dto": "no",
+    "pagination": "no",
+    "service": "no"
+}

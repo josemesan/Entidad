@@ -1,0 +1,22 @@
+{
+    "entidadApp": {
+        "fecha" : {
+            "home": {
+                "title": "Fechas",
+                "createLabel": "Create a new Fecha",
+                "createOrEditLabel": "Create or edit a Fecha"
+            },
+            "created": "A new Fecha is created with identifier {{ param }}",
+            "updated": "A Fecha is updated with identifier {{ param }}",
+            "deleted": "A Fecha is deleted with identifier {{ param }}",
+            "delete": {
+                "question": "Are you sure you want to delete Fecha {{ id }}?"
+            },
+            "detail": {
+                "title": "Fecha"
+            },
+            "dia": "Dia",
+            "hora": "Hora"
+        }
+    }
+}

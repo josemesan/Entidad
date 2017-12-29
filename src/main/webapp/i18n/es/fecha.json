@@ -1,0 +1,22 @@
+{
+    "entidadApp": {
+        "fecha" : {
+            "home": {
+                "title": "Fechas",
+                "createLabel": "Crear nuevo Fecha",
+                "createOrEditLabel": "Crear o editar Fecha"
+            },
+            "created": "Un nuevo Fecha ha sido creado con el identificador {{ param }}",
+            "updated": "Un Fecha ha sido actualizado con el identificador {{ param }}",
+            "deleted": "Un Fecha ha sido eliminado con el identificador {{ param }}",
+            "delete": {
+                "question": "¿Seguro que quiere eliminar Fecha {{ id }}?"
+            },
+            "detail": {
+                "title": "Fecha"
+            },
+            "dia": "Dia",
+            "hora": "Hora"
+        }
+    }
+}

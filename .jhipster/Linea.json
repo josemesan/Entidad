@@ -1,0 +1,15 @@
+{
+    "fluentMethods": true,
+    "relationships": [],
+    "fields": [
+        {
+            "fieldName": "numeroDeTrenes",
+            "fieldType": "Integer"
+        }
+    ],
+    "changelogDate": "20171229105421",
+    "entityTableName": "linea",
+    "dto": "no",
+    "pagination": "no",
+    "service": "no"
+}
