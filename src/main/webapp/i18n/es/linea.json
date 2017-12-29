@@ -1,23 +1,21 @@
 {
     "entidadApp": {
-        "Linea" : {
-            "null": "",
-            "L1": "L1",
-            "L2": "L2",
-            "L3": "L3",
-            "L4": "L4",
-            "L5": "L5",
-            "L6": "L6",
-            "L7": "L7",
-            "L7B": "L7B",
-            "L8": "L8",
-            "L9": "L9",
-            "TFM": "TFM",
-            "L10": "L10",
-            "L10B": "L10B",
-            "L11": "L11",
-            "L12": "L12",
-            "RAMAL": "RAMAL"
+        "linea" : {
+            "home": {
+                "title": "Lineas",
+                "createLabel": "Crear nuevo Linea",
+                "createOrEditLabel": "Crear o editar Linea"
+            },
+            "created": "Un nuevo Linea ha sido creado con el identificador {{ param }}",
+            "updated": "Un Linea ha sido actualizado con el identificador {{ param }}",
+            "deleted": "Un Linea ha sido eliminado con el identificador {{ param }}",
+            "delete": {
+                "question": "¿Seguro que quiere eliminar Linea {{ id }}?"
+            },
+            "detail": {
+                "title": "Linea"
+            },
+            "numeroDeTrenes": "Numero De Trenes"
         }
     }
 }
